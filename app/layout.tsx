@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   },
   description:
     "Installation caméras, sécurité, réseau, maintenance, sites web, logiciels, publicité et réseaux sociaux.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

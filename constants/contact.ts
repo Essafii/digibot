@@ -4,9 +4,9 @@
  * Si `phoneTel` est vide, le numéro s’affiche sans lien cliquable.
  */
 export const COMPANY_CONTACT = {
-  email: "contact@digibot.fr",
-  phoneDisplay: "À renseigner",
-  /** Ex. +33612345678 — laisser vide tant que le numéro n’est pas public */
-  phoneTel: "",
-  cityLine: "Intervention sur devis — France",
+  email: "digibot.contact@gmail.com",
+  phoneDisplay: "+212 6 51 14 49 55",
+  /** Format E.164 pour le lien tel: (chiffres après +, sans espaces) */
+  phoneTel: "+212651144955",
+  cityLine: "Intervention sur devis — Maroc",
 };
