@@ -17,43 +17,43 @@ export const homeWhyDigibot: HomeWhyBlock[] = [
   {
     id: "custom",
     icon: "custom",
-    title: "Solutions sur mesure",
+    title: "Sur mesure, pas sur catalogue",
     description:
-      "Chaque projet est étudié pour répondre précisément à vos contraintes et à vos objectifs.",
+      "Nous dimensionnons le matériel et le périmètre à votre commerce, bureau ou domicile — pas de surenchère inutile.",
   },
   {
     id: "expertise",
     icon: "expertise",
-    title: "Expertise multi-domaines",
+    title: "Sécurité, réseau, web & pub",
     description:
-      "Une même équipe pour la sécurité, le réseau, le web et le marketing — coordination simplifiée.",
+      "Une seule équipe pour la caméra, la baie réseau, le site et la campagne : moins de coordination, plus de cohérence.",
   },
   {
     id: "support",
     icon: "support",
-    title: "Accompagnement complet",
+    title: "Du cadrage à la passation",
     description:
-      "De l’audit initial au déploiement et au suivi, nous restons à vos côtés sur la durée.",
+      "Devis détaillé, installation propre, réglages testés puis explications pour que vous restiez autonome au quotidien.",
   },
   {
     id: "reactive",
     icon: "reactive",
-    title: "Support réactif",
+    title: "Réactivité utile",
     description:
-      "Interventions et réponses rapides pour limiter les interruptions et sécuriser vos équipements.",
+      "Échanges rapides par téléphone, WhatsApp ou e-mail — interventions planifiées pour limiter l’impact sur votre activité.",
   },
   {
     id: "image",
     icon: "image",
-    title: "Image professionnelle",
+    title: "Rendu pro sur le terrain",
     description:
-      "Des réalisations soignées qui renforcent la confiance de vos clients et partenaires.",
+      "Câblage, finitions et interfaces soignées : ce que vos clients et vos équipes voient au quotidien compte pour nous.",
   },
   {
     id: "tech",
     icon: "tech",
-    title: "Technologies modernes",
+    title: "Technologies actuelles",
     description:
-      "Outils et pratiques à jour pour des installations durables et évolutives.",
+      "Équipements courants du marché (vidéo IP, Wi‑Fi entreprise, web moderne) choisis pour la fiabilité et la durabilité.",
   },
 ];

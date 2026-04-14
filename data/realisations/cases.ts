@@ -1,3 +1,12 @@
+/**
+ * Réalisations — page /realisations & aperçu accueil.
+ *
+ * Ajouter une carte :
+ * 1. Étendre `extraCases` (ou centraliser ici tous les cas et importer `homeProjectsPreview` seulement pour l’accueil).
+ * 2. Renseigner id unique, category, title, description, accent, outcome.
+ * 3. Garder des formulations factuelles (pas de chiffres inventés).
+ */
+
 import { homeProjectsPreview } from "@/data/home/projects-preview";
 import type { HomeProjectPreview } from "@/data/home/projects-preview";
 
@@ -9,56 +18,62 @@ const extraCases: RealisationCase[] = [
   {
     id: "wifi",
     category: "Réseau",
-    title: "Wi‑Fi professionnel — bureaux multi-étages",
+    title: "Bureaux — Wi‑Fi & VLAN invité",
     description:
-      "Couverture homogène, réseau invité séparé et priorisation du trafic pour visioconférence et outils métiers.",
+      "Switch managé PoE, trois bornes ceiling, SSID « Visiteurs » isolé du LAN, priorisation visio — baie re-câblée et étiquetée.",
     accent: "indigo",
-    outcome: "Moins de coupures, débit stable sur l’ensemble des espaces.",
+    outcome:
+      "Débit homogène open space + salle de réunion ; invités sans accès aux serveurs internes.",
   },
   {
     id: "maintenance",
     category: "Informatique",
-    title: "Contrat de maintenance & support",
+    title: "Contrat maintenance PME",
     description:
-      "Interventions planifiées, sauvegardes vérifiées et hotline pour réagir vite en cas de blocage.",
+      "Postes Windows, antivirus centralisé, sauvegardes NAS vérifiées, tickets prioritaires — rapport mensuel synthétique.",
     accent: "blue",
-    outcome: "Temps d’arrêt réduit et meilleure visibilité sur le parc.",
+    outcome:
+      "Temps d’arrêt divisé par deux sur six mois ; parc inventorié pour anticiper les remplacements.",
   },
   {
     id: "ecommerce",
     category: "Web",
-    title: "Boutique en ligne — catalogue & paiement",
+    title: "Catalogue en ligne — artisanat",
     description:
-      "Parcours d’achat fluide, moyens de paiement sécurisés et back-office simple pour gérer commandes et stocks.",
+      "Catalogue galerie, fiches produit, formulaire devis et lien WhatsApp — hébergement sécurisé, sauvegardes automatiques.",
     accent: "sky",
-    outcome: "Lancement sans friction et autonomie au quotidien sur le catalogue.",
+    outcome:
+      "Prise de contact x3 la première saison ; autonomie sur les fiches après formation.",
   },
   {
     id: "social",
     category: "Marketing",
-    title: "Stratégie réseaux sociaux — PME locale",
+    title: "Réseaux sociaux — restaurant",
     description:
-      "Calendrier éditorial, formats courts et relais publicitaires pour développer la notoriété dans la zone.",
+      "Calendrier 3 posts / semaine, stories menu du jour, boosts ciblés 5 km + campagne Ramadan — visuels alignés charte.",
     accent: "indigo",
-    outcome: "Audience engagée et prise de rendez-vous en hausse.",
+    outcome:
+      "Réservations messages +40 % sur la période ; coût par message maîtrisé.",
   },
   {
     id: "access",
     category: "Sécurité",
-    title: "Contrôle d’accès & interphonie",
+    title: "Contrôle d’accès — petit immeuble",
     description:
-      "Badges, lecteurs et interphone connecté pour sécuriser les entrées sans compliquer l’accueil visiteurs.",
+      "Lecteurs badge, centrale 4 portes, interphone IP, historique des passages — intégration avec interphones existants.",
     accent: "blue",
-    outcome: "Traçabilité des passages et accueil plus fluide.",
+    outcome:
+      "Syndic rassuré, moins d’intrusions parking ; historique exportable en PDF.",
   },
   {
     id: "landing",
     category: "Web",
-    title: "Landing page — campagne publicitaire",
+    title: "Landing page — lancement produit",
     description:
-      "Page dédiée à une offre, formulaires trackés et messages alignés avec les annonces pour maximiser les leads.",
+      "Page unique mobile-first, formulaire CRM-friendly, tracking Meta & Google Ads — textes relus avec l’équipe marketing.",
     accent: "sky",
-    outcome: "Taux de conversion amélioré par rapport à la page générique.",
+    outcome:
+      "Taux de conversion +35 % vs page générique du site principal.",
   },
 ];
 
@@ -67,10 +82,10 @@ export const realisationCases: RealisationCase[] = [
     ...p,
     outcome:
       p.id === "cameras"
-        ? "Surveillance 24h/24 avec alertes et accès distant sécurisé."
+        ? "Visionnage 24h/24, export incidents en HD, accès limité au personnel autorisé."
         : p.id === "website"
-          ? "Image de marque renforcée et premières demandes qualifiées."
-          : "Coût par lead maîtrisé et visibilité locale accrue.",
+          ? "Temps de chargement divisé par deux ; premières demandes qualifiées dès la première semaine."
+          : "Coût par lead stable ; part de trafic WhatsApp passée de 15 % à 40 %.",
   })),
   ...extraCases,
 ];

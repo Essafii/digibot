@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-import { BRAND } from "@/constants/brand";
+import { BRAND, BRAND_FOOTER_PITCH } from "@/constants/brand";
 import { COMPANY_CONTACT } from "@/constants/contact";
 import { ROUTES } from "@/constants/routes";
 import { footerServiceLinks } from "@/data/footer";
@@ -38,8 +38,7 @@ export function Footer() {
               {BRAND.tagline}
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-brand-300/90">
-              Solutions sur mesure en sécurité, réseaux, développement et
-              marketing digital pour entreprises, commerces et particuliers.
+              {BRAND_FOOTER_PITCH}
             </p>
           </div>
 
@@ -150,6 +149,12 @@ export function Footer() {
                   <span className="font-medium text-brand-50">
                     {COMPANY_CONTACT.cityLine}
                   </span>
+                  <span className="mt-2 block text-xs leading-relaxed text-brand-300/95">
+                    {COMPANY_CONTACT.zoneDetail}
+                  </span>
+                  <span className="mt-2 block text-xs leading-relaxed text-brand-400/90">
+                    {COMPANY_CONTACT.appointmentNote}
+                  </span>
                 </span>
               </li>
             </ul>
@@ -159,7 +164,7 @@ export function Footer() {
                 variant="onDark"
                 className="w-full justify-center rounded-xl py-3 text-sm shadow-lg shadow-black/25"
               >
-                Demander un devis
+                Demander un devis gratuit
               </ButtonLink>
               <ButtonLink
                 href={ROUTES.contact}

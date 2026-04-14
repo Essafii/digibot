@@ -6,29 +6,33 @@ export type HomeProjectPreview = {
   accent: "blue" | "indigo" | "sky";
 };
 
+/**
+ * Aperçu accueil — synchronisé avec la logique `realisationCases` (voir `data/realisations/cases.ts`).
+ * Pour ajouter une réalisation page dédiée : complétez aussi `extraCases` ou la source unique prévue dans cases.ts.
+ */
 export const homeProjectsPreview: HomeProjectPreview[] = [
   {
     id: "cameras",
     category: "Sécurité",
-    title: "Installation caméras pour commerce",
+    title: "Vidéo IP — commerce de proximité",
     description:
-      "Système de surveillance discret et fiable pour sécuriser les accès et les zones sensibles.",
+      "Huit caméras intérieur / extérieur, NVR 30 jours, accès smartphone pour le gérant — câblage discret en faux plafond.",
     accent: "blue",
   },
   {
     id: "website",
     category: "Web",
-    title: "Création site web vitrine",
+    title: "Site vitrine PME — leads qualifiés",
     description:
-      "Présentation claire de l’activité, design moderne et base solide pour le référencement.",
+      "Site Next.js rapide, pages services, formulaire avec type de demande et zone — base SEO locale (Google Business relié).",
     accent: "indigo",
   },
   {
     id: "ads",
     category: "Marketing",
-    title: "Campagne Ads — visibilité locale",
+    title: "Meta Ads — offre locale Casa",
     description:
-      "Ciblage géographique et messages adaptés pour attirer de nouveaux clients près de vous.",
+      "Campagne leads 15 km autour du point de vente, créatives carrousel + messages WhatsApp Business — budget suivi chaque semaine.",
     accent: "sky",
   },
 ];

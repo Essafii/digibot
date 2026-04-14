@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { WhatsappFloat } from "@/components/layout/whatsapp-float";
 
 import "./globals.css";
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | DIGIBOT",
   },
   description:
-    "Installation caméras, sécurité, réseau, maintenance, sites web, logiciels, publicité et réseaux sociaux.",
+    "DIGIBOT — vidéosurveillance et sécurité, réseaux & Wi‑Fi, sites web et logiciels, publicité et réseaux sociaux. Interventions au Maroc, devis transparent, un seul interlocuteur.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsappFloat />
       </body>
     </html>
   );

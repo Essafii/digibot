@@ -19,18 +19,31 @@ export function HomeHero() {
               Services digitaux & techniques
             </p>
             <h1 className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight text-brand-950 sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
-              Bienvenue chez {BRAND.name}
+              {BRAND.name}, votre partenaire technique au Maroc
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-brand-900/80 sm:text-xl">
-              Nous accompagnons les entreprises, commerces et particuliers dans
-              leurs besoins en sécurité, réseaux, développement web, logiciels et
-              marketing digital.
+              Entreprises, commerces et particuliers : nous installons la
+              vidéosurveillance, stabilisons vos réseaux et Wi‑Fi, créons vos sites
+              web et pilotons vos campagnes digitales — un interlocuteur, des
+              devis détaillés, des chantiers soignés.
             </p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-              <ButtonLink href={ROUTES.quote}>Demander un devis</ButtonLink>
-              <ButtonLink href={ROUTES.services} variant="secondary">
-                Nos services
-              </ButtonLink>
+            <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:items-start sm:gap-10">
+              <div className="flex flex-col items-start gap-2">
+                <ButtonLink href={ROUTES.quote}>
+                  Demander un devis gratuit
+                </ButtonLink>
+                <p className="max-w-xs text-xs leading-snug text-brand-700/85">
+                  Devis clair • sans surprise sur le périmètre
+                </p>
+              </div>
+              <div className="flex flex-col items-start gap-2">
+                <ButtonLink href={ROUTES.services} variant="secondary">
+                  Découvrir nos services
+                </ButtonLink>
+                <p className="max-w-xs text-xs leading-snug text-brand-700/85">
+                  Sécurité, réseau, web & marketing — une seule équipe
+                </p>
+              </div>
             </div>
           </div>
           <HomeHeroVisual />

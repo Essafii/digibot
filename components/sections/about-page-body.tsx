@@ -35,7 +35,7 @@ const values = [
 const stats = [
   { value: "4", label: "piliers d’expertise" },
   { value: "100%", label: "sur devis personnalisé" },
-  { value: "FR", label: "interventions France" },
+  { value: "MA", label: "interventions Maroc" },
 ] as const;
 
 export function AboutPageBody() {
@@ -48,18 +48,18 @@ export function AboutPageBody() {
               <SectionHeading
                 eyebrow="Notre histoire"
                 title={`${BRAND.name}, partenaire technique de confiance`}
-                description="Nous aidons les entreprises, commerces et particuliers à sécuriser leurs lieux, fiabiliser leurs réseaux et développer leur présence digitale — avec la même exigence sur la qualité du travail et la clarté des échanges."
+                description="DIGIBOT accompagne les entreprises, commerces et particuliers au Maroc : sécurité, réseaux, web et marketing digital — avec la même exigence sur la qualité d’exécution et la clarté du devis."
               />
               <p className="mt-6 text-base leading-relaxed text-brand-900/75">
-                Chaque mission est traitée avec méthode : écoute du besoin, proposition
-                argumentée, exécution soignée et passation pour que vous restiez
-                autonomes sur le quotidien. Nous privilégions les solutions adaptées
-                à votre réalité plutôt que les gadgets inutiles.
+                Chaque mission suit un fil conducteur : écoute du besoin sur site ou
+                à distance, proposition argumentée, installation ou développement
+                soignés, puis passation pour votre autonomie. Nous privilégions le
+                matériel et les solutions éprouvés plutôt que l’effet gadget.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href={ROUTES.quote}>Demander un devis</ButtonLink>
+                <ButtonLink href={ROUTES.quote}>Demander un devis gratuit</ButtonLink>
                 <ButtonLink href={ROUTES.services} variant="secondary">
-                  Découvrir les services
+                  Découvrir nos services
                 </ButtonLink>
               </div>
             </div>
@@ -119,7 +119,13 @@ export function AboutPageBody() {
         </Container>
       </SectionShell>
 
-      <PageCta />
+      <PageCta
+        title="Travailler avec DIGIBOT"
+        description="Expliquez votre contexte au Maroc : nous revenons vers vous avec un devis structuré et des délais réalistes."
+        primaryLabel="Demander un devis gratuit"
+        primaryHint="Sans engagement • matériel & main d’œuvre détaillés"
+        secondaryHint="Réponse rapide — en général sous 24 à 48 h ouvrées"
+      />
     </>
   );
 }

@@ -8,7 +8,7 @@ import { ROUTES } from "@/constants/routes";
 export const metadata: Metadata = {
   title: "Réalisations",
   description:
-    "Exemples de projets DIGIBOT : sécurité, réseau, web, marketing — études de cas et résultats obtenus pour nos clients.",
+    "Projets DIGIBOT au Maroc : vidéosurveillance, réseaux, sites web, Meta Ads — extraits de missions et résultats obtenus pour nos clients.",
 };
 
 export default function ProjectsPage() {
@@ -17,12 +17,12 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Confiance"
         title="Réalisations"
-        description="Un échantillon de missions menées pour des clients exigeants. Chaque contexte est unique : nos propositions sont toujours adaptées à votre situation."
+        description="Extraits de chantiers et de livrables numériques — chaque dossier est unique ; nos devis reprennent votre contexte réel (site, budget, délais)."
         actions={
           <>
-            <ButtonLink href={ROUTES.quote}>Votre projet</ButtonLink>
-            <ButtonLink href={ROUTES.services} variant="secondary">
-              Nos services
+            <ButtonLink href={ROUTES.quote}>Demander un devis gratuit</ButtonLink>
+            <ButtonLink href={ROUTES.contact} variant="secondary">
+              Nous contacter
             </ButtonLink>
           </>
         }

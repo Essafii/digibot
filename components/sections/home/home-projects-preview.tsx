@@ -24,20 +24,20 @@ export function HomeProjectsPreview() {
       <Container className="max-w-7xl">
         <SectionHeading
           eyebrow="Réalisations"
-          title="Des projets concrets, des résultats mesurables"
-          description="Un aperçu du type d’interventions que nous menons au quotidien pour nos clients."
+          title="Des chantiers menés comme les vôtres"
+          description="Extraits de missions au Maroc — détail, périmètre et résultats sur la page Réalisations."
           align="center"
           className="mx-auto max-w-3xl"
           action={
             <ButtonLink href={ROUTES.projects} variant="secondary">
-              Voir toutes les réalisations
+              Voir nos réalisations
             </ButtonLink>
           }
         />
-        <ul className="mt-14 grid gap-8 lg:mt-16 lg:grid-cols-3">
+        <ul className="mt-14 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-10">
           {homeProjectsPreview.map((project) => (
             <li key={project.id}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/10">
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/10">
                 <div
                   className={cn(
                     "h-1.5 w-full bg-gradient-to-r",

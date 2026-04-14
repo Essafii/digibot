@@ -211,7 +211,7 @@ export function QuoteForm() {
         type="submit"
         className="mt-6 w-full rounded-xl bg-brand-600 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:bg-brand-700 sm:w-auto"
       >
-        Préparer l’e-mail de devis
+        Demander un devis gratuit
       </button>
     </form>
   );

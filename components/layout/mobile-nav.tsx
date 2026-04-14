@@ -28,7 +28,7 @@ export function MobileNav() {
         href={ROUTES.quote}
         className="rounded-lg px-3 py-2 text-xs font-semibold shadow-md sm:text-sm"
       >
-        Devis
+        Demander un devis gratuit
       </ButtonLink>
       <button
         type="button"
@@ -84,7 +84,7 @@ export function MobileNav() {
                     className="w-full rounded-xl py-3.5 text-sm shadow-lg"
                     onClick={() => setOpen(false)}
                   >
-                    Demander un devis
+                    Demander un devis gratuit
                   </ButtonLink>
                 </div>
               </Container>

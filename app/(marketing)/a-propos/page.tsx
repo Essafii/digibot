@@ -8,7 +8,7 @@ import { ROUTES } from "@/constants/routes";
 export const metadata: Metadata = {
   title: "À propos",
   description:
-    "DIGIBOT : qui sommes-nous, nos engagements et notre façon d’accompagner entreprises et particuliers sur le technique et le digital.",
+    "DIGIBOT au Maroc : notre façon de travailler, nos engagements et l’accompagnement entreprises, commerces et particuliers sur le technique et le digital.",
 };
 
 export default function AboutPage() {
@@ -17,12 +17,12 @@ export default function AboutPage() {
       <PageHero
         eyebrow="L’équipe"
         title="À propos"
-        description="Nous croyons à un partenariat technique simple : écouter, proposer clairement, livrer proprement. Découvrez ce qui nous anime au quotidien."
+        description="Un partenariat simple : écouter, chiffrer clairement, installer proprement. Voici ce qui guide DIGIBOT au quotidien."
         actions={
           <>
-            <ButtonLink href={ROUTES.quote}>Travailler avec nous</ButtonLink>
+            <ButtonLink href={ROUTES.quote}>Demander un devis gratuit</ButtonLink>
             <ButtonLink href={ROUTES.projects} variant="secondary">
-              Nos réalisations
+              Voir nos réalisations
             </ButtonLink>
           </>
         }

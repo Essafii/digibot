@@ -8,7 +8,7 @@ import { ROUTES } from "@/constants/routes";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez DIGIBOT par e-mail ou formulaire : questions, accompagnement projet, zone d’intervention France.",
+    "Contact DIGIBOT : e-mail, téléphone, WhatsApp ou formulaire. Interventions au Maroc — réponse rapide, devis détaillé sur demande.",
 };
 
 export default function ContactPage() {
@@ -17,10 +17,10 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Échange"
         title="Contact"
-        description="Une question, un besoin urgent ou un premier contact ? Nous vous répondons dans les meilleurs délais. Pour un chiffrage, privilégiez la demande de devis."
+        description="Une question technique, un complément sur un devis ou un premier contact : écrivez-nous. Pour un chiffrage complet, passez par la demande de devis — même interlocuteur."
         actions={
           <ButtonLink href={ROUTES.quote} variant="secondary">
-            Demander un devis
+            Demander un devis gratuit
           </ButtonLink>
         }
       />

@@ -38,12 +38,12 @@ export function QuotePageBody() {
               <p className="mt-3 text-sm leading-relaxed text-brand-900/75 sm:text-base">
                 Ce formulaire ne transmet pas les données à nos serveurs : il
                 prépare un e-mail dans votre messagerie. Vous gardez le contrôle
-                avant l’envoi. Une question avant de partir ? Passez par la{" "}
+                avant l’envoi. Une question avant de partir ?{" "}
                 <Link
                   href={ROUTES.contact}
                   className="font-semibold text-brand-700 underline-offset-2 hover:underline"
                 >
-                  page Contact
+                  Nous contacter
                 </Link>
                 .
               </p>

@@ -20,7 +20,7 @@ export default function QuotePage() {
         description="Décrivez votre besoin : nous revenons vers vous pour préciser le périmètre et vous transmettre une offre détaillée. Le formulaire prépare un e-mail dans votre messagerie."
         actions={
           <ButtonLink href={ROUTES.contact} variant="secondary">
-            Simple question ? Contact
+            Nous contacter
           </ButtonLink>
         }
       />

@@ -33,7 +33,7 @@ export function Navbar() {
             href={ROUTES.quote}
             className="rounded-xl px-4 py-2 text-sm font-semibold shadow-md shadow-brand-600/30 transition hover:shadow-lg hover:shadow-brand-600/25 lg:px-5 lg:py-2.5"
           >
-            Demander un devis
+            Demander un devis gratuit
           </ButtonLink>
         </div>
 

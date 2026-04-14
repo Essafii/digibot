@@ -7,32 +7,32 @@ export type HomeProcessStep = {
 export const homeProcessSteps: HomeProcessStep[] = [
   {
     step: 1,
-    title: "Analyse du besoin",
+    title: "Échange & visite si besoin",
     description:
-      "Échange et audit pour comprendre votre contexte, vos contraintes et vos priorités.",
+      "Nous clarifions l’objectif, les contraintes (accès, horaires, budget) et, pour les chantiers, nous préparons une visite ou un diagnostic à distance.",
   },
   {
     step: 2,
-    title: "Proposition de solution",
+    title: "Devis détaillé",
     description:
-      "Devis détaillé, choix des équipements et planning prévisionnel, en toute transparence.",
+      "Matériel, main d’œuvre, délais et exclusions sont listés — vous savez exactement ce que DIGIBOT livre pour ce prix.",
   },
   {
     step: 3,
-    title: "Mise en œuvre",
+    title: "Installation & configuration",
     description:
-      "Installation, configuration et intégration réalisées avec rigueur et respect des délais.",
+      "Pose, câblage, paramétrage et tests : nous livrons un système opérationnel, pas un « gros colis » à assembler.",
   },
   {
     step: 4,
-    title: "Test et validation",
+    title: "Recette avec vous",
     description:
-      "Vérifications, mise en service et formation aux usages pour une prise en main immédiate.",
+      "Contrôles image / réseau / site ensemble, comptes et accès remis — formation courte pour les usages courants.",
   },
   {
     step: 5,
-    title: "Suivi et maintenance",
+    title: "Suivi & évolutions",
     description:
-      "Accompagnement dans la durée, mises à jour et interventions selon vos besoins.",
+      "Maintenance ponctuelle ou contrat selon accord — extensions (caméras, bornes Wi‑Fi, pages web) quand votre activité grandit.",
   },
 ];

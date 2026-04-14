@@ -32,7 +32,7 @@ export function RealisationsPageBody() {
             className="mx-auto max-w-3xl"
             action={
               <ButtonLink href={ROUTES.quote} variant="secondary">
-                Votre projet ici
+                Demander un devis gratuit
               </ButtonLink>
             }
           />
@@ -69,7 +69,7 @@ export function RealisationsPageBody() {
                       href={ROUTES.quote}
                       className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:text-brand-800"
                     >
-                      Projet similaire ?
+                      Demander un devis gratuit
                       <ArrowUpRight
                         className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                         aria-hidden
@@ -82,7 +82,13 @@ export function RealisationsPageBody() {
           </ul>
         </Container>
       </SectionShell>
-      <PageCta />
+      <PageCta
+        title="Votre projet sur cette liste demain ?"
+        description="DIGIBOT livre des chantiers propres et documentés au Maroc — demandez un devis pour un périmètre clair."
+        primaryLabel="Demander un devis gratuit"
+        primaryHint="Sans engagement • planning & budget détaillés"
+        secondaryHint="Réponse rapide — en général sous 24 à 48 h ouvrées"
+      />
     </>
   );
 }
