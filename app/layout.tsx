@@ -21,11 +21,6 @@ export const metadata: Metadata = {
   },
   description:
     "DIGIBOT — vidéosurveillance et sécurité, réseaux & Wi‑Fi, sites web et logiciels, publicité et réseaux sociaux. Interventions au Maroc, devis transparent, un seul interlocuteur.",
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-  },
 };
 
 export default function RootLayout({

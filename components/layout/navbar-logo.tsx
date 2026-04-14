@@ -16,6 +16,7 @@ export function NavbarLogo() {
         width={280}
         height={72}
         priority
+        unoptimized
         sizes="(max-width: 768px) 200px, 280px"
         className="h-[44px] w-auto md:h-[48px] lg:h-[52px]"
       />

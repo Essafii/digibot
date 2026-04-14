@@ -15,6 +15,7 @@ export function FooterLogo() {
         alt={`${BRAND.name} — ${BRAND.tagline}`}
         width={200}
         height={52}
+        unoptimized
         sizes="200px"
         className="h-10 w-auto sm:h-11"
       />
