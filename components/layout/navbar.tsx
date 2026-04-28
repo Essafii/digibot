@@ -10,7 +10,7 @@ import { NavbarLogo } from "./navbar-logo";
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100/90 bg-white/90 shadow-sm shadow-brand-900/[0.04] backdrop-blur-md supports-[backdrop-filter]:bg-white/85">
-      <Container className="flex max-w-7xl min-h-[4.25rem] items-center justify-between gap-6 py-2.5 sm:min-h-[4.5rem] sm:gap-8 md:gap-10 lg:gap-12">
+      <Container className="flex max-w-7xl min-h-[5rem] items-center justify-between gap-6 py-3 sm:min-h-[5.25rem] sm:gap-8 sm:py-3.5 md:gap-10 lg:gap-12">
         <div className="flex min-w-0 shrink-0 items-center pr-1 sm:pr-2">
           <NavbarLogo />
         </div>

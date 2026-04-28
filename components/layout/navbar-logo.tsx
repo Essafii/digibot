@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { BRAND, BRAND_LOGO_SRC } from "@/constants/brand";
@@ -10,15 +9,14 @@ export function NavbarLogo() {
       href={ROUTES.home}
       className="relative flex shrink-0 items-center outline-none ring-brand-400/40 transition-opacity hover:opacity-95 focus-visible:ring-2 focus-visible:ring-offset-2"
     >
-      <Image
+      <img
         src={BRAND_LOGO_SRC}
         alt={`${BRAND.name} — ${BRAND.tagline}`}
-        width={280}
-        height={72}
-        priority
-        unoptimized
-        sizes="(max-width: 768px) 200px, 280px"
-        className="h-[44px] w-auto md:h-[48px] lg:h-[52px]"
+        width={360}
+        height={93}
+        fetchPriority="high"
+        decoding="async"
+        className="h-[52px] w-auto sm:h-[58px] md:h-[62px] lg:h-[68px]"
       />
     </Link>
   );
