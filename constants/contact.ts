@@ -23,7 +23,7 @@ export const COMPANY_CONTACT = {
    * Ajustez selon votre rayon réel d’intervention.
    */
   zoneDetail:
-    "Région prioritaire : Grand Casablanca et périphérie. Déplacements vers Rabat, Marrakech, Tanger, Fès et autres villes selon projet (planning & frais de déplacement intégrés au devis).",
+    "Région prioritaire : Rabat et périphérie. Déplacements vers Casablanca, Marrakech, Tanger, Fès et autres villes selon projet (planning & frais de déplacement intégrés au devis).",
   /**
    * Modalités rendez-vous — utile si pas d’adresse siège publique.
    * Remplacez par une adresse complète quand vous la communiquez en ligne.
