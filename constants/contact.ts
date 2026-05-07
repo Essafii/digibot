@@ -6,14 +6,14 @@ export const COMPANY_CONTACT = {
   /** Nom commercial affiché aux côtés des coordonnées si besoin */
   companyName: "DIGIBOT",
   email: "digibot.contact@gmail.com",
-  phoneDisplay: "+212 6 51 14 49 55",
+  phoneDisplay: "+212 6 60 60 46 14",
   /** Lien tel: — format E.164 (+indicatif sans espaces) */
-  phoneTel: "+212651144955",
+  phoneTel: "+212660604614",
   /**
    * WhatsApp (bouton flottant) — chiffres uniques, indicatif pays sans + ni espaces.
    * Ex. Maroc : 212… Laisser "" pour masquer le bouton.
    */
-  whatsappDial: "212651144955",
+  whatsappDial: "212660604614",
   /** Texte d’ouverture du message WhatsApp (éditable) */
   whatsappPrefillMessage: "Bonjour DIGIBOT, je vous contacte pour : ",
   /** Ligne courte (footer, badges) */
