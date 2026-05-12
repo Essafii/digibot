@@ -10,7 +10,7 @@ import { NavbarLogo } from "./navbar-logo";
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100/90 bg-white/90 shadow-sm shadow-brand-900/[0.04] backdrop-blur-md supports-[backdrop-filter]:bg-white/85">
-      <Container className="flex max-w-7xl min-h-[14rem] items-center justify-between gap-8 py-8 sm:min-h-[15rem] sm:gap-10 sm:py-9 md:min-h-[16rem] md:gap-12 lg:min-h-[18rem] lg:gap-14">
+      <Container className="flex max-w-7xl min-h-[11rem] items-center justify-between gap-8 py-6 sm:min-h-[12rem] sm:gap-10 sm:py-7 md:min-h-[13rem] md:gap-12 lg:min-h-[14rem] lg:gap-14">
         <div className="flex min-w-0 shrink-0 items-center pr-2">
           <NavbarLogo />
         </div>
@@ -31,7 +31,7 @@ export function Navbar() {
         <div className="hidden shrink-0 items-center md:flex">
           <ButtonLink
             href={ROUTES.quote}
-            className="rounded-xl px-7 py-4 text-lg font-semibold shadow-md shadow-brand-600/30 transition hover:shadow-lg hover:shadow-brand-600/25"
+            className="rounded-xl px-6 py-3 text-base font-semibold shadow-md shadow-brand-600/30 transition hover:shadow-lg hover:shadow-brand-600/25 lg:px-7 lg:py-4"
           >
             Demander un devis gratuit
           </ButtonLink>
