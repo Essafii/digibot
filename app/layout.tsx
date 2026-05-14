@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | DIGIBOT",
   },
   description:
-    "DIGIBOT — vidéosurveillance et sécurité, réseaux & Wi‑Fi, sites web et logiciels, publicité et réseaux sociaux. Interventions au Maroc, devis transparent, un seul interlocuteur.",
+    "DIGIBOT — vidéosurveillance et sécurité, réseaux & Wi-Fi, sites web et logiciels, publicité et réseaux sociaux. Interventions au Maroc, devis transparent, un seul interlocuteur.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="fr" className={inter.variable}>
+    <html lang="fr" className={inter.variable} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col font-sans">
         <Header />
         <main className="flex-1">{children}</main>

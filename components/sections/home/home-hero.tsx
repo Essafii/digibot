@@ -18,15 +18,18 @@ export function HomeHero() {
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-600">
               Services digitaux & techniques
             </p>
+
             <h1 className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight text-brand-950 sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
               {BRAND.name}, votre partenaire technique au Maroc
             </h1>
+
             <p className="mt-6 text-lg leading-relaxed text-brand-900/80 sm:text-xl">
               Entreprises, commerces et particuliers : nous installons la
-              vidéosurveillance, stabilisons vos réseaux et Wi‑Fi, créons vos sites
-              web et pilotons vos campagnes digitales — un interlocuteur, des
-              devis détaillés, des chantiers soignés.
+              vidéosurveillance, stabilisons vos réseaux et Wi-Fi, créons vos
+              sites web et pilotons vos campagnes digitales — un interlocuteur,
+              des devis détaillés, des chantiers soignés.
             </p>
+
             <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:items-start sm:gap-10">
               <div className="flex flex-col items-start gap-2">
                 <ButtonLink href={ROUTES.quote}>
@@ -36,6 +39,7 @@ export function HomeHero() {
                   Devis clair • sans surprise sur le périmètre
                 </p>
               </div>
+
               <div className="flex flex-col items-start gap-2">
                 <ButtonLink href={ROUTES.services} variant="secondary">
                   Découvrir nos services
@@ -46,6 +50,7 @@ export function HomeHero() {
               </div>
             </div>
           </div>
+
           <HomeHeroVisual />
         </div>
       </Container>

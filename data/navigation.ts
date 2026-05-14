@@ -14,7 +14,6 @@ export const mainNav: NavItem[] = [
   { label: "Contact", href: ROUTES.contact },
 ];
 
-/** Liens affichés dans la barre (le devis est un CTA séparé). */
 export const mainNavInline: NavItem[] = mainNav.filter(
   (item) => item.href !== ROUTES.quote,
 );

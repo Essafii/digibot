@@ -1,11 +1,10 @@
-import { ROUTES } from "@/constants/routes";
 import { mainNavInline } from "@/data/navigation";
 import { Container } from "@/components/ui/container";
-import { ButtonLink } from "@/components/ui/button-link";
 
 import { MobileNav } from "./mobile-nav";
 import { NavLink } from "./nav-link";
 import { NavbarLogo } from "./navbar-logo";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function Navbar() {
   return (
@@ -27,6 +26,10 @@ export function Navbar() {
               </NavLink>
             ))}
           </nav>
+        </div>
+
+        <div className="hidden items-center md:flex">
+          <LanguageSwitcher />
         </div>
 
         <MobileNav />
