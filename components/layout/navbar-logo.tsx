@@ -7,7 +7,7 @@ export function NavbarLogo() {
   return (
     <Link
       href={ROUTES.home}
-      className="relative flex shrink-0 items-center"
+      className="relative flex shrink-0 items-center -ml-6 lg:-ml-10"
     >
       <img
         src={BRAND_LOGO_SRC}
