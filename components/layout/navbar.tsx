@@ -1,4 +1,7 @@
-import { mainNavInline } from "@/data/navigation";
+"use client";
+
+import { getMainNavInline } from "@/data/navigation";
+import { useLanguage } from "@/components/language-provider";
 import { Container } from "@/components/ui/container";
 
 import { MobileNav } from "./mobile-nav";
@@ -7,10 +10,12 @@ import { NavbarLogo } from "./navbar-logo";
 import { LanguageSwitcher } from "./language-switcher";
 
 export function Navbar() {
+  const { language } = useLanguage();
+  const mainNavInline = getMainNavInline(language);
+
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100/90 bg-white/90 shadow-sm shadow-brand-900/[0.04] backdrop-blur-md supports-[backdrop-filter]:bg-white/85">
       <Container className="flex max-w-7xl min-h-[7rem] items-center justify-between gap-8 py-4 sm:min-h-[8rem] sm:gap-10 sm:py-5 md:min-h-[8.5rem] md:gap-12 lg:min-h-[9rem] lg:gap-14">
-        
         <div className="flex min-w-0 shrink-0 items-center pr-2">
           <NavbarLogo />
         </div>

@@ -1,15 +1,12 @@
+"use client";
+
 import type { ComponentType } from "react";
-import {
-  Award,
-  Cpu,
-  Handshake,
-  Layers,
-  Puzzle,
-  Zap,
-} from "lucide-react";
+import { Award, Cpu, Handshake, Layers, Puzzle, Zap } from "lucide-react";
 
 import { homeWhyDigibot } from "@/data/home/why-digibot";
 import type { HomeWhyIcon } from "@/data/home/why-digibot";
+import { translations } from "@/constants/translations";
+import { useLanguage } from "@/components/language-provider";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionShell } from "@/components/ui/section-shell";
@@ -28,19 +25,25 @@ const whyIcons: Record<
 };
 
 export function HomeWhy() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const whyBlocks = homeWhyDigibot[language];
+
   return (
     <SectionShell tone="soft">
       <Container className="max-w-7xl">
         <SectionHeading
-          eyebrow="Valeur ajoutée"
-          title="Pourquoi choisir DIGIBOT ?"
-          description="Un partenaire technique et digital pour des projets sérieux, livrés avec exigence et suivi dans le temps."
+          eyebrow={t.homeWhyEyebrow}
+          title={t.homeWhyTitle}
+          description={t.homeWhyDescription}
           align="center"
           className="mx-auto max-w-3xl"
         />
+
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-8">
-          {homeWhyDigibot.map((item) => {
+          {whyBlocks.map((item) => {
             const Icon = whyIcons[item.icon];
+
             return (
               <li key={item.id}>
                 <article
@@ -52,9 +55,11 @@ export function HomeWhy() {
                   <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
                     <Icon className="h-5 w-5" aria-hidden />
                   </div>
+
                   <h3 className="mt-4 text-lg font-bold text-brand-950">
                     {item.title}
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-brand-900/70">
                     {item.description}
                   </p>

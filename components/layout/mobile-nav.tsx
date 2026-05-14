@@ -3,19 +3,25 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import { mainNavInline } from "@/data/navigation";
+import { getMainNavInline } from "@/data/navigation";
+import { useLanguage } from "@/components/language-provider";
 import { Container } from "@/components/ui/container";
 import { NavLink } from "./nav-link";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const { language } = useLanguage();
+  const mainNavInline = getMainNavInline(language);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
   return (
-    <div className="relative z-[9999] flex items-center md:hidden">
+    <div className="relative z-[9999] flex items-center gap-2 md:hidden">
+      <LanguageSwitcher />
+
       <button
         type="button"
         className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-200 bg-white text-brand-800 shadow-sm"

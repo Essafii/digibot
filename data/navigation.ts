@@ -1,19 +1,24 @@
 import { ROUTES, type RouteHref } from "@/constants/routes";
+import { translations, type Language } from "@/constants/translations";
 
 export type NavItem = {
   label: string;
   href: RouteHref;
 };
 
-export const mainNav: NavItem[] = [
-  { label: "Accueil", href: ROUTES.home },
-  { label: "À propos", href: ROUTES.about },
-  { label: "Services", href: ROUTES.services },
-  { label: "Réalisations", href: ROUTES.projects },
-  { label: "Devis", href: ROUTES.quote },
-  { label: "Contact", href: ROUTES.contact },
-];
+export function getMainNav(language: Language): NavItem[] {
+  const t = translations[language];
 
-export const mainNavInline: NavItem[] = mainNav.filter(
-  (item) => item.href !== ROUTES.quote,
-);
+  return [
+    { label: t.home, href: ROUTES.home },
+    { label: t.about, href: ROUTES.about },
+    { label: t.services, href: ROUTES.services },
+    { label: t.projects, href: ROUTES.projects },
+    { label: t.quote, href: ROUTES.quote },
+    { label: t.contact, href: ROUTES.contact },
+  ];
+}
+
+export function getMainNavInline(language: Language): NavItem[] {
+  return getMainNav(language).filter((item) => item.href !== ROUTES.quote);
+}

@@ -1,3 +1,5 @@
+import type { Language } from "@/constants/translations";
+
 export type HomeProjectPreview = {
   id: string;
   category: string;
@@ -6,33 +8,85 @@ export type HomeProjectPreview = {
   accent: "blue" | "indigo" | "sky";
 };
 
-/**
- * Aperçu accueil — synchronisé avec la logique `realisationCases` (voir `data/realisations/cases.ts`).
- * Pour ajouter une réalisation page dédiée : complétez aussi `extraCases` ou la source unique prévue dans cases.ts.
- */
-export const homeProjectsPreview: HomeProjectPreview[] = [
-  {
-    id: "cameras",
-    category: "Sécurité",
-    title: "Vidéo IP — commerce de proximité",
-    description:
-      "Huit caméras intérieur / extérieur, NVR 30 jours, accès smartphone pour le gérant — câblage discret en faux plafond.",
-    accent: "blue",
-  },
-  {
-    id: "website",
-    category: "Web",
-    title: "Site vitrine PME — leads qualifiés",
-    description:
-      "Site Next.js rapide, pages services, formulaire avec type de demande et zone — base SEO locale (Google Business relié).",
-    accent: "indigo",
-  },
-  {
-    id: "ads",
-    category: "Marketing",
-    title: "Meta Ads — offre locale Casa",
-    description:
-      "Campagne leads 15 km autour du point de vente, créatives carrousel + messages WhatsApp Business — budget suivi chaque semaine.",
-    accent: "sky",
-  },
-];
+export const homeProjectsPreview: Record<Language, HomeProjectPreview[]> = {
+  fr: [
+    {
+      id: "cameras",
+      category: "Sécurité",
+      title: "Vidéo IP — commerce de proximité",
+      description:
+        "Huit caméras intérieur / extérieur, NVR 30 jours, accès smartphone pour le gérant — câblage discret.",
+      accent: "blue",
+    },
+    {
+      id: "website",
+      category: "Web",
+      title: "Site vitrine PME — leads qualifiés",
+      description:
+        "Site Next.js rapide, pages services, formulaire de demande et base SEO locale.",
+      accent: "indigo",
+    },
+    {
+      id: "ads",
+      category: "Marketing",
+      title: "Meta Ads — offre locale Casa",
+      description:
+        "Campagne leads locale, créatives carrousel et messages WhatsApp Business.",
+      accent: "sky",
+    },
+  ],
+
+  en: [
+    {
+      id: "cameras",
+      category: "Security",
+      title: "IP video — local shop",
+      description:
+        "Eight indoor/outdoor cameras, 30-day NVR, smartphone access for the manager and discreet cabling.",
+      accent: "blue",
+    },
+    {
+      id: "website",
+      category: "Web",
+      title: "SME showcase website — qualified leads",
+      description:
+        "Fast Next.js website, service pages, request form and local SEO foundation.",
+      accent: "indigo",
+    },
+    {
+      id: "ads",
+      category: "Marketing",
+      title: "Meta Ads — local offer in Casablanca",
+      description:
+        "Local lead campaign, carousel creatives and WhatsApp Business messages.",
+      accent: "sky",
+    },
+  ],
+
+  ar: [
+    {
+      id: "cameras",
+      category: "الأمن",
+      title: "كاميرات IP — متجر محلي",
+      description:
+        "ثماني كاميرات داخلية وخارجية، تسجيل 30 يوماً، وصول عبر الهاتف وتوصيل منظم.",
+      accent: "blue",
+    },
+    {
+      id: "website",
+      category: "الويب",
+      title: "موقع تعريفي لشركة — عملاء مؤهلون",
+      description:
+        "موقع سريع بـ Next.js، صفحات خدمات، نموذج طلب وأساس SEO محلي.",
+      accent: "indigo",
+    },
+    {
+      id: "ads",
+      category: "التسويق",
+      title: "إعلانات Meta — عرض محلي في الدار البيضاء",
+      description:
+        "حملة عملاء محلية، تصاميم كاروسيل ورسائل WhatsApp Business.",
+      accent: "sky",
+    },
+  ],
+};

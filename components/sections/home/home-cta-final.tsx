@@ -1,13 +1,20 @@
+"use client";
+
+import { translations } from "@/constants/translations";
+import { useLanguage } from "@/components/language-provider";
 import { PageCta } from "@/components/sections/page-cta";
 
 export function HomeCtaFinal() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <PageCta
-      title="Vous avez un projet ? Parlons-en dès aujourd’hui."
-      description="DIGIBOT vous accompagne de l’idée à la mise en place — solutions modernes, fiables et chiffrées clairement."
-      primaryLabel="Demander un devis gratuit"
-      primaryHint="Sans engagement • devis détaillé"
-      secondaryHint="Réponse rapide — en général sous 24 à 48 h ouvrées"
+      title={t.homeCtaTitle}
+      description={t.homeCtaDescription}
+      primaryLabel={t.quote}
+      primaryHint={t.homeCtaPrimaryHint}
+      secondaryHint={t.homeCtaSecondaryHint}
     />
   );
 }
