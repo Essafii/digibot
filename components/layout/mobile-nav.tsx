@@ -41,7 +41,7 @@ export function MobileNav() {
         <>
           <button
             type="button"
-            className="fixed inset-x-0 bottom-0 top-[4.25rem] z-40 bg-brand-950/40 backdrop-blur-[2px] sm:top-[4.5rem]"
+            className="fixed inset-x-0 bottom-0 top-[7rem] z-[9998] bg-brand-950/40 backdrop-blur-[2px]"
             aria-hidden
             tabIndex={-1}
             onClick={() => setOpen(false)}
@@ -49,7 +49,7 @@ export function MobileNav() {
 
           <div
             id="mobile-menu"
-            className="fixed inset-x-0 bottom-0 top-[4.25rem] z-50 flex flex-col overflow-hidden border-t border-brand-100 bg-white shadow-2xl shadow-brand-900/15 sm:top-[4.5rem]"
+            className="fixed inset-x-0 bottom-0 top-[7rem] z-[9999] flex flex-col overflow-hidden border-t border-brand-100 bg-white shadow-2xl shadow-brand-900/15"
             role="dialog"
             aria-modal="true"
             aria-label="Menu de navigation"
