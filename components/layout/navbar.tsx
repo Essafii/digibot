@@ -29,15 +29,6 @@ export function Navbar() {
           </nav>
         </div>
 
-        <div className="hidden shrink-0 items-center md:flex">
-          <ButtonLink
-            href={ROUTES.quote}
-            className="rounded-xl px-6 py-3 text-base font-semibold shadow-md shadow-brand-600/30 transition hover:shadow-lg hover:shadow-brand-600/25 lg:px-7 lg:py-4"
-          >
-            Demander un devis gratuit
-          </ButtonLink>
-        </div>
-
         <MobileNav />
       </Container>
     </header>
