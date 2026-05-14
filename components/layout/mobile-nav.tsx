@@ -3,9 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import { ROUTES } from "@/constants/routes";
 import { mainNavInline } from "@/data/navigation";
-import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 
 import { NavLink } from "./nav-link";
@@ -24,12 +22,6 @@ export function MobileNav() {
 
   return (
     <div className="flex items-center gap-2 md:hidden">
-      <ButtonLink
-        href={ROUTES.quote}
-        className="rounded-lg px-3 py-2 text-xs font-semibold shadow-md sm:text-sm"
-      >
-        Demander un devis gratuit
-      </ButtonLink>
       <button
         type="button"
         className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-brand-200 bg-white text-brand-800 shadow-sm transition hover:border-brand-300 hover:bg-brand-50"
@@ -44,6 +36,7 @@ export function MobileNav() {
           <Menu className="h-5 w-5" aria-hidden />
         )}
       </button>
+
       {open ? (
         <>
           <button
@@ -53,6 +46,7 @@ export function MobileNav() {
             tabIndex={-1}
             onClick={() => setOpen(false)}
           />
+
           <div
             id="mobile-menu"
             className="fixed inset-x-0 bottom-0 top-[4.25rem] z-50 flex flex-col overflow-hidden border-t border-brand-100 bg-white shadow-2xl shadow-brand-900/15 sm:top-[4.5rem]"
@@ -78,15 +72,6 @@ export function MobileNav() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 border-t border-brand-100 pt-6">
-                  <ButtonLink
-                    href={ROUTES.quote}
-                    className="w-full rounded-xl py-3.5 text-sm shadow-lg"
-                    onClick={() => setOpen(false)}
-                  >
-                    Demander un devis gratuit
-                  </ButtonLink>
-                </div>
               </Container>
             </nav>
           </div>
