@@ -15,39 +15,46 @@ export function MobileNav() {
   }, [open]);
 
   return (
-    <div className="relative z-[9999] flex items-center gap-2 md:hidden">
+    <div className="relative z-[9999] flex items-center md:hidden">
       <button
         type="button"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-brand-200 bg-white text-brand-800 shadow-sm"
+        className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-200 bg-white text-brand-800 shadow-sm"
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         onClick={() => setOpen((v) => !v)}
       >
-        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
       {open && (
-        <div
-          id="mobile-menu"
-          className="absolute right-0 top-14 z-[9999] w-[90vw] rounded-2xl border border-brand-100 bg-white p-4 shadow-2xl"
-        >
-          <Container className="p-0">
-            <ul className="flex flex-col gap-1">
-              {mainNavInline.map((item) => (
-                <li key={item.href}>
-                  <NavLink
-                    href={item.href}
-                    className="block w-full px-3 py-3.5 text-base"
-                    onNavigate={() => setOpen(false)}
-                  >
-                    {item.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </div>
+        <>
+          <div
+            className="fixed inset-0 z-[9998] bg-black/20"
+            onClick={() => setOpen(false)}
+          />
+
+          <div
+            id="mobile-menu"
+            className="absolute right-0 top-16 z-[9999] w-[92vw] max-w-sm rounded-2xl border border-brand-100 bg-white p-4 shadow-2xl"
+          >
+            <Container className="p-0">
+              <ul className="flex flex-col gap-2">
+                {mainNavInline.map((item) => (
+                  <li key={item.href}>
+                    <NavLink
+                      href={item.href}
+                      className="block w-full rounded-xl px-4 py-3 text-base"
+                      onNavigate={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </Container>
+          </div>
+        </>
       )}
     </div>
   );
