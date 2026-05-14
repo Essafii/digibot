@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { WhatsappFloat } from "@/components/layout/whatsapp-float";
+import { LanguageProvider } from "@/components/language-provider";
 
 import "./globals.css";
 
@@ -31,10 +32,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className={inter.variable} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col font-sans">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsappFloat />
+        <LanguageProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <WhatsappFloat />
+        </LanguageProvider>
       </body>
     </html>
   );
