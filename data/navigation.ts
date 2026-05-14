@@ -22,3 +22,9 @@ export function getMainNav(language: Language): NavItem[] {
 export function getMainNavInline(language: Language): NavItem[] {
   return getMainNav(language).filter((item) => item.href !== ROUTES.quote);
 }
+
+export const mainNav: NavItem[] = getMainNav("fr");
+
+export const mainNavInline: NavItem[] = mainNav.filter(
+  (item) => item.href !== ROUTES.quote,
+);
