@@ -5,78 +5,50 @@ import { Menu, X } from "lucide-react";
 
 import { mainNavInline } from "@/data/navigation";
 import { Container } from "@/components/ui/container";
-
 import { NavLink } from "./nav-link";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!open) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
+    document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
   return (
-    <div className="flex items-center gap-2 md:hidden">
+    <div className="relative z-[9999] flex items-center gap-2 md:hidden">
       <button
         type="button"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-brand-200 bg-white text-brand-800 shadow-sm transition hover:border-brand-300 hover:bg-brand-50"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-brand-200 bg-white text-brand-800 shadow-sm"
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         onClick={() => setOpen((v) => !v)}
       >
-        {open ? (
-          <X className="h-5 w-5" aria-hidden />
-        ) : (
-          <Menu className="h-5 w-5" aria-hidden />
-        )}
+        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
 
-      {open ? (
-        <>
-          <button
-            type="button"
-            className="fixed inset-x-0 bottom-0 top-[7rem] z-[9998] bg-brand-950/40 backdrop-blur-[2px]"
-            aria-hidden
-            tabIndex={-1}
-            onClick={() => setOpen(false)}
-          />
-
-          <div
-            id="mobile-menu"
-            className="fixed inset-x-0 bottom-0 top-[7rem] z-[9999] flex flex-col overflow-hidden border-t border-brand-100 bg-white shadow-2xl shadow-brand-900/15"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Menu de navigation"
-          >
-            <nav
-              className="flex-1 overflow-y-auto overscroll-contain"
-              aria-label="Principal mobile"
-            >
-              <Container className="py-4">
-                <ul className="flex flex-col gap-1">
-                  {mainNavInline.map((item) => (
-                    <li key={item.href}>
-                      <NavLink
-                        href={item.href}
-                        className="block w-full px-3 py-3.5 text-base"
-                        onNavigate={() => setOpen(false)}
-                      >
-                        {item.label}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              </Container>
-            </nav>
-          </div>
-        </>
-      ) : null}
+      {open && (
+        <div
+          id="mobile-menu"
+          className="absolute right-0 top-14 z-[9999] w-[90vw] rounded-2xl border border-brand-100 bg-white p-4 shadow-2xl"
+        >
+          <Container className="p-0">
+            <ul className="flex flex-col gap-1">
+              {mainNavInline.map((item) => (
+                <li key={item.href}>
+                  <NavLink
+                    href={item.href}
+                    className="block w-full px-3 py-3.5 text-base"
+                    onNavigate={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </div>
+      )}
     </div>
   );
 }
