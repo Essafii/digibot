@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -31,13 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={inter.variable} suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col font-sans">
-        <LanguageProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsappFloat />
-        </LanguageProvider>
+      <body className="flex min-h-screen flex-col font-sans bg-white text-slate-900 dark:bg-slate-950 dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <LanguageProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <WhatsappFloat />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
