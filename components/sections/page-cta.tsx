@@ -11,9 +11,7 @@ type PageCtaProps = {
   description?: string;
   primaryLabel?: string;
   secondaryLabel?: string;
-  /** Sous-texte sous le bouton principal (conversion). */
   primaryHint?: string;
-  /** Sous-texte sous le bouton secondaire. */
   secondaryHint?: string;
 };
 
@@ -26,7 +24,7 @@ export function PageCta({
   secondaryHint = "Réponse rapide — en général sous 24 à 48 h ouvrées",
 }: PageCtaProps = {}) {
   return (
-    <section className="relative overflow-hidden bg-brand-950 py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-brand-950 dark:bg-slate-950 py-20 sm:py-24 lg:py-28">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_85%_90%_at_50%_100%,rgba(37,99,235,0.45),transparent)]"
         aria-hidden
@@ -39,16 +37,20 @@ export function PageCta({
         className="pointer-events-none absolute -right-16 bottom-0 h-48 w-48 rounded-full bg-brand-600/20 blur-3xl"
         aria-hidden
       />
+
       <Container className="relative max-w-3xl text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/95">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/95 dark:text-brand-400">
           Prochaine étape
         </p>
+
         <h2 className="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
           {title}
         </h2>
-        <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-brand-100/90 sm:text-base">
+
+        <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-brand-100/90 dark:text-slate-300 sm:text-base">
           {description}
         </p>
+
         <div className="mx-auto mt-10 flex max-w-lg flex-col gap-8 sm:max-w-none sm:flex-row sm:justify-center sm:gap-12">
           <div className="flex flex-col items-center gap-2">
             <ButtonLink
@@ -58,12 +60,14 @@ export function PageCta({
             >
               {primaryLabel}
             </ButtonLink>
+
             {primaryHint ? (
-              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90">
+              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90 dark:text-slate-400">
                 {primaryHint}
               </p>
             ) : null}
           </div>
+
           <div className="flex flex-col items-center gap-2">
             <ButtonLink
               href={ROUTES.contact}
@@ -72,8 +76,9 @@ export function PageCta({
             >
               {secondaryLabel}
             </ButtonLink>
+
             {secondaryHint ? (
-              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90">
+              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90 dark:text-slate-400">
                 {secondaryHint}
               </p>
             ) : null}

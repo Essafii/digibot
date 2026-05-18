@@ -14,7 +14,7 @@ import { FooterLogo } from "./footer-logo";
 
 function FooterColumnTitle({ children }: { children: ReactNode }) {
   return (
-    <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-brand-300">
+    <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-brand-300 dark:text-brand-400">
       {children}
     </p>
   );
@@ -24,27 +24,30 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-auto overflow-hidden border-t border-brand-800/80 bg-gradient-to-b from-brand-950 via-brand-950 to-[#0c1428] text-brand-100">
+    <footer className="relative mt-auto overflow-hidden border-t border-brand-800/80 dark:border-slate-800 bg-gradient-to-b from-brand-950 via-brand-950 to-[#0c1428] dark:from-slate-950 dark:via-slate-950 dark:to-black text-brand-100">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_40%_at_85%_0%,rgba(59,130,246,0.12),transparent)]"
         aria-hidden
       />
+
       <Container className="relative max-w-7xl py-14 sm:py-16 lg:py-20">
         <div className="grid gap-12 sm:gap-14 lg:grid-cols-12 lg:gap-10 xl:gap-12">
-          {/* Marque + logo */}
+          
           <div className="lg:col-span-4">
             <FooterLogo />
-            <p className="mt-5 text-sm font-medium leading-relaxed text-brand-200/95">
+
+            <p className="mt-5 text-sm font-medium leading-relaxed text-brand-200/95 dark:text-slate-300">
               {BRAND.tagline}
             </p>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-brand-300/90">
+
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-brand-300/90 dark:text-slate-400">
               {BRAND_FOOTER_PITCH}
             </p>
           </div>
 
-          {/* Navigation */}
           <div className="lg:col-span-2">
             <FooterColumnTitle>Navigation</FooterColumnTitle>
+
             <nav
               className="mt-5 flex flex-col gap-3"
               aria-label="Liens du pied de page"
@@ -53,7 +56,7 @@ export function Footer() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group inline-flex w-fit items-center text-sm font-medium text-brand-100/90 transition hover:text-white"
+                  className="group inline-flex w-fit items-center text-sm font-medium text-brand-100/90 dark:text-slate-300 transition hover:text-white"
                 >
                   <span className="border-b border-transparent pb-px transition group-hover:border-brand-400 group-hover:text-white">
                     {item.label}
@@ -63,15 +66,15 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Services */}
           <div className="lg:col-span-3">
             <FooterColumnTitle>Services</FooterColumnTitle>
+
             <ul className="mt-5 flex flex-col gap-3">
               {footerServiceLinks.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="group inline-flex w-fit text-sm font-medium text-brand-100/90 transition hover:text-white"
+                    className="group inline-flex w-fit text-sm font-medium text-brand-100/90 dark:text-slate-300 transition hover:text-white"
                   >
                     <span className="border-b border-transparent pb-px transition group-hover:border-brand-400 group-hover:text-white">
                       {item.label}
@@ -82,82 +85,79 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="lg:col-span-3">
             <FooterColumnTitle>Contact</FooterColumnTitle>
+
             <ul className="mt-5 flex flex-col gap-4">
               <li>
                 <a
                   href={`mailto:${COMPANY_CONTACT.email}`}
-                  className="group flex gap-3 text-sm text-brand-100/90 transition hover:text-white"
+                  className="group flex gap-3 text-sm text-brand-100/90 dark:text-slate-300 transition hover:text-white"
                 >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-900/80 text-brand-300 ring-1 ring-white/10 transition group-hover:bg-brand-600 group-hover:text-white group-hover:ring-brand-400/40">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-900/80 dark:bg-slate-800 text-brand-300 ring-1 ring-white/10 transition group-hover:bg-brand-600 group-hover:text-white group-hover:ring-brand-400/40">
                     <Mail className="h-4 w-4" aria-hidden />
                   </span>
+
                   <span className="min-w-0 pt-1.5">
                     <span className="block text-xs font-medium uppercase tracking-wider text-brand-400">
                       Email
                     </span>
-                    <span className="font-medium text-brand-50">
+
+                    <span className="font-medium text-brand-50 dark:text-white">
                       {COMPANY_CONTACT.email}
                     </span>
                   </span>
                 </a>
               </li>
+
               <li>
                 {COMPANY_CONTACT.phoneTel ? (
                   <a
                     href={`tel:${COMPANY_CONTACT.phoneTel}`}
-                    className="group flex gap-3 text-sm text-brand-100/90 transition hover:text-white"
+                    className="group flex gap-3 text-sm text-brand-100/90 dark:text-slate-300 transition hover:text-white"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-900/80 text-brand-300 ring-1 ring-white/10 transition group-hover:bg-brand-600 group-hover:text-white group-hover:ring-brand-400/40">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-900/80 dark:bg-slate-800 text-brand-300 ring-1 ring-white/10 transition group-hover:bg-brand-600 group-hover:text-white group-hover:ring-brand-400/40">
                       <Phone className="h-4 w-4" aria-hidden />
                     </span>
+
                     <span className="min-w-0 pt-1.5">
                       <span className="block text-xs font-medium uppercase tracking-wider text-brand-400">
                         Téléphone
                       </span>
-                      <span className="font-medium text-brand-50">
+
+                      <span className="font-medium text-brand-50 dark:text-white">
                         {COMPANY_CONTACT.phoneDisplay}
                       </span>
                     </span>
                   </a>
-                ) : (
-                  <div className="flex gap-3 text-sm text-brand-100/90">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-900/80 text-brand-300 ring-1 ring-white/10">
-                      <Phone className="h-4 w-4" aria-hidden />
-                    </span>
-                    <span className="min-w-0 pt-1.5">
-                      <span className="block text-xs font-medium uppercase tracking-wider text-brand-400">
-                        Téléphone
-                      </span>
-                      <span className="font-medium text-brand-50">
-                        {COMPANY_CONTACT.phoneDisplay}
-                      </span>
-                    </span>
-                  </div>
-                )}
+                ) : null}
               </li>
-              <li className="flex gap-3 text-sm text-brand-100/90">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-900/80 text-brand-300 ring-1 ring-white/10">
+
+              <li className="flex gap-3 text-sm text-brand-100/90 dark:text-slate-300">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-900/80 dark:bg-slate-800 text-brand-300 ring-1 ring-white/10">
                   <MapPin className="h-4 w-4" aria-hidden />
                 </span>
+
                 <span className="min-w-0 pt-1.5">
                   <span className="block text-xs font-medium uppercase tracking-wider text-brand-400">
                     Zone
                   </span>
-                  <span className="font-medium text-brand-50">
+
+                  <span className="font-medium text-brand-50 dark:text-white">
                     {COMPANY_CONTACT.cityLine}
                   </span>
-                  <span className="mt-2 block text-xs leading-relaxed text-brand-300/95">
+
+                  <span className="mt-2 block text-xs leading-relaxed text-brand-300/95 dark:text-slate-400">
                     {COMPANY_CONTACT.zoneDetail}
                   </span>
-                  <span className="mt-2 block text-xs leading-relaxed text-brand-400/90">
+
+                  <span className="mt-2 block text-xs leading-relaxed text-brand-400/90 dark:text-slate-500">
                     {COMPANY_CONTACT.appointmentNote}
                   </span>
                 </span>
               </li>
             </ul>
+
             <div className="mt-8 flex flex-col gap-3">
               <ButtonLink
                 href={ROUTES.quote}
@@ -166,6 +166,7 @@ export function Footer() {
               >
                 Demander un devis gratuit
               </ButtonLink>
+
               <ButtonLink
                 href={ROUTES.contact}
                 variant="outlineOnDark"
@@ -178,12 +179,13 @@ export function Footer() {
         </div>
       </Container>
 
-      <div className="relative border-t border-white/[0.08] bg-black/20">
+      <div className="relative border-t border-white/[0.08] bg-black/20 dark:border-slate-800">
         <Container className="flex max-w-7xl flex-col items-center justify-between gap-4 py-6 sm:flex-row">
-          <p className="text-center text-xs text-brand-400/90 sm:text-left">
+          <p className="text-center text-xs text-brand-400/90 dark:text-slate-500 sm:text-left">
             © {year} {BRAND.name}. Tous droits réservés.
           </p>
-          <p className="text-center text-xs text-brand-500/80 sm:text-right">
+
+          <p className="text-center text-xs text-brand-500/80 dark:text-slate-600 sm:text-right">
             {BRAND.tagline}
           </p>
         </Container>

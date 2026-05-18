@@ -25,7 +25,7 @@ export function HomeProjectsPreview() {
   const projects = homeProjectsPreview[language];
 
   return (
-    <SectionShell tone="gradient">
+    <SectionShell tone="gradient" className="dark:bg-slate-950">
       <Container className="max-w-7xl">
         <SectionHeading
           eyebrow={t.homeProjectsEyebrow}
@@ -43,7 +43,7 @@ export function HomeProjectsPreview() {
         <ul className="mt-14 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-10">
           {projects.map((project) => (
             <li key={project.id}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/10">
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/10 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/20 dark:hover:border-brand-500/40 dark:hover:shadow-brand-950/30">
                 <div
                   className={cn(
                     "h-1.5 w-full bg-gradient-to-r",
@@ -52,21 +52,21 @@ export function HomeProjectsPreview() {
                 />
 
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">
                     {project.category}
                   </p>
 
-                  <h3 className="mt-2 text-lg font-bold text-brand-950">
+                  <h3 className="mt-2 text-lg font-bold text-brand-950 dark:text-white">
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-900/70">
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-900/70 dark:text-slate-300">
                     {project.description}
                   </p>
 
                   <Link
                     href={ROUTES.projects}
-                    className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:text-brand-800"
+                    className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-300"
                   >
                     {t.learnMore}
                     <ArrowUpRight
