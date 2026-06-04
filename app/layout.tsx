@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { WhatsappFloat } from "@/components/layout/whatsapp-float";
+import { SolarFloat } from "@/components/layout/solar-float";
 import { LanguageProvider } from "@/components/language-provider";
 
 import "./globals.css";
@@ -38,7 +39,9 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+
             <WhatsappFloat />
+            <SolarFloat />
           </LanguageProvider>
         </ThemeProvider>
       </body>
