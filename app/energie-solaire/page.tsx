@@ -144,7 +144,7 @@ export default function EnergieSolairePage() {
             />
 
             <Link
-              href="https://wa.me/212661444844"
+              href="https://wa.me/212660604614"
               target="_blank"
               className="block rounded-xl bg-blue-950 py-4 text-center text-lg font-bold text-white hover:bg-blue-900"
             >
