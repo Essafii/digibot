@@ -1,12 +1,31 @@
 /** Icône associée à un service (grille accueil, fiches, cartes). */
-export type HomeServiceIcon = "security" | "network" | "web" | "marketing";
+export type HomeServiceIcon =
+  | "security"
+  | "network"
+  | "web"
+  | "marketing"
+  | "tv"
+  | "lock"
+  | "cable"
+  | "alarm"
+  | "speaker"
+  | "videophone"
+  | "door";
 
 /** Slug URL — ajouter une entrée ici + fichier dans pages/ pour un nouveau service. */
 export type ServiceSlug =
   | "securite-videosurveillance"
   | "reseaux-cablage-informatique"
   | "web-logiciels-sur-mesure"
-  | "publicite-reseaux-sociaux";
+  | "publicite-reseaux-sociaux"
+  | "teledistribution"
+  | "videosurveillance"
+  | "controle-acces"
+  | "cablage"
+  | "systeme-alarme"
+  | "sonorisation"
+  | "videophone"
+  | "porte-automatique";
 
 export type ServiceCatalogEntry = {
   slug: ServiceSlug;

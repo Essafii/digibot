@@ -1,13 +1,9 @@
-"use client";
-
 import { translations } from "@/constants/translations";
-import { useLanguage } from "@/components/language-provider";
 import { PageCta } from "@/components/sections/page-cta";
 
-export function HomeCtaFinal() {
-  const { language } = useLanguage();
-  const t = translations[language];
+const t = translations.fr;
 
+export function HomeCtaFinal() {
   return (
     <PageCta
       title={t.homeCtaTitle}

@@ -78,7 +78,7 @@ const extraCases: RealisationCase[] = [
 ];
 
 export const realisationCases: RealisationCase[] = [
-  ...homeProjectsPreview.fr.map((p) => ({
+  ...homeProjectsPreview.map((p) => ({
     ...p,
     outcome:
       p.id === "cameras"

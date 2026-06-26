@@ -11,12 +11,12 @@ export function ServicesHubGrid() {
       <Container className="max-w-7xl">
         <SectionHeading
           eyebrow="Nos expertises"
-          title="Quatre leviers pour sécuriser, connecter et développer"
+          title="Sécurité, infrastructure & confort — un seul interlocuteur"
           description="Chaque fiche détaille le périmètre, des exemples de matériel et notre méthode — pour vous projeter avant le premier échange."
           align="center"
           className="mx-auto max-w-2xl"
         />
-        <ul className="mt-16 grid gap-10 sm:grid-cols-2 lg:mt-20 lg:gap-12">
+        <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-6 xl:gap-8">
           {servicesCatalog.map((entry) => (
             <ServiceSummaryCard key={entry.slug} entry={entry} />
           ))}

@@ -24,7 +24,7 @@ export function PageCta({
   secondaryHint = "Réponse rapide — en général sous 24 à 48 h ouvrées",
 }: PageCtaProps = {}) {
   return (
-    <section className="relative overflow-hidden bg-brand-950 dark:bg-slate-950 py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-brand-950 py-20 sm:py-24 lg:py-28">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_85%_90%_at_50%_100%,rgba(37,99,235,0.45),transparent)]"
         aria-hidden
@@ -39,7 +39,7 @@ export function PageCta({
       />
 
       <Container className="relative max-w-3xl text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/95 dark:text-brand-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/95">
           Prochaine étape
         </p>
 
@@ -47,7 +47,7 @@ export function PageCta({
           {title}
         </h2>
 
-        <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-brand-100/90 dark:text-slate-300 sm:text-base">
+        <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-brand-100/90 sm:text-base">
           {description}
         </p>
 
@@ -62,7 +62,7 @@ export function PageCta({
             </ButtonLink>
 
             {primaryHint ? (
-              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90 dark:text-slate-400">
+              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90">
                 {primaryHint}
               </p>
             ) : null}
@@ -78,7 +78,7 @@ export function PageCta({
             </ButtonLink>
 
             {secondaryHint ? (
-              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90 dark:text-slate-400">
+              <p className="max-w-[18rem] text-center text-xs leading-snug text-brand-200/90">
                 {secondaryHint}
               </p>
             ) : null}

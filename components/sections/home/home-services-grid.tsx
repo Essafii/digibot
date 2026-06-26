@@ -1,38 +1,24 @@
 "use client";
 
-import type { ComponentType } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Camera, Code2, Megaphone, Network } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { homeServicesHighlight } from "@/data/home/services-highlight";
-import type { HomeServiceIcon } from "@/data/services/types";
 import { servicePath } from "@/constants/services";
+import { serviceIcons } from "@/components/sections/services/service-icons";
 import { translations } from "@/constants/translations";
-import { useLanguage } from "@/components/language-provider";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionShell } from "@/components/ui/section-shell";
 import { cn } from "@/lib/utils/cn";
 
-const serviceIcons: Record<
-  HomeServiceIcon,
-  ComponentType<{ className?: string; "aria-hidden"?: boolean }>
-> = {
-  security: Camera,
-  network: Network,
-  web: Code2,
-  marketing: Megaphone,
-};
+const t = translations.fr;
 
 export function HomeServicesGrid() {
-  const { language } = useLanguage();
-  const t = translations[language];
-  const services = homeServicesHighlight[language];
-
   return (
     <SectionShell
       tone="white"
-      className="!py-20 sm:!py-24 lg:!py-28 dark:bg-slate-950"
+      className="!py-20 sm:!py-24 lg:!py-28"
     >
       <Container className="max-w-7xl">
         <SectionHeading
@@ -44,7 +30,7 @@ export function HomeServicesGrid() {
         />
 
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-8">
-          {services.map((item) => {
+          {homeServicesHighlight.map((item) => {
             const Icon = serviceIcons[item.icon];
             const detailHref = servicePath(item.detailSlug);
 
@@ -53,26 +39,24 @@ export function HomeServicesGrid() {
                 <article
                   className={cn(
                     "group flex h-full flex-col rounded-3xl border border-brand-100 bg-white p-6 shadow-sm sm:p-7",
-                    "dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/20",
                     "transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/10",
-                    "dark:hover:border-brand-500/50 dark:hover:shadow-brand-950/30",
                   )}
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white shadow-md shadow-brand-600/25 transition group-hover:bg-brand-700">
                     <Icon className="h-6 w-6" aria-hidden />
                   </div>
 
-                  <h3 className="mt-5 text-lg font-bold text-brand-950 dark:text-white">
+                  <h3 className="mt-5 text-lg font-bold text-brand-950">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-900/72 dark:text-slate-300">
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-900/72">
                     {item.description}
                   </p>
 
                   <Link
                     href={detailHref}
-                    className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition hover:text-brand-900 dark:text-brand-400 dark:hover:text-brand-300"
+                    className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition hover:text-brand-900"
                   >
                     {t.discoverService}
                     <ArrowUpRight
