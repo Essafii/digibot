@@ -41,14 +41,8 @@ export function SolarFloat() {
         ☀️
       </div>
 
-      <div className="leading-tight">
-        <div className="text-[10px] font-semibold uppercase tracking-wider opacity-90">
-          Nouvelle activité
-        </div>
-
-        <div className="text-sm font-bold">
-          Énergie solaire
-        </div>
+      <div className="text-sm font-bold leading-tight">
+        Énergie solaire
       </div>
     </Link>
   );

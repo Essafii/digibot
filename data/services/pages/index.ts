@@ -12,6 +12,8 @@ import { systemeAlarmePage } from "./systeme-alarme";
 import { sonorisationPage } from "./sonorisation";
 import { videophonePage } from "./videophone";
 import { porteAutomatiquePage } from "./porte-automatique";
+import { materielInformatiquePage } from "./materiel-informatique";
+import { contratMaintenancePage } from "./contrat-maintenance";
 
 export const SERVICE_PAGE_BY_SLUG: Record<ServiceSlug, ServicePageContent> = {
   "securite-videosurveillance": securiteVideosurveillancePage,
@@ -26,6 +28,8 @@ export const SERVICE_PAGE_BY_SLUG: Record<ServiceSlug, ServicePageContent> = {
   "sonorisation": sonorisationPage,
   "videophone": videophonePage,
   "porte-automatique": porteAutomatiquePage,
+  "materiel-informatique": materielInformatiquePage,
+  "contrat-maintenance": contratMaintenancePage,
 };
 
 export const ALL_SERVICE_SLUGS = Object.keys(

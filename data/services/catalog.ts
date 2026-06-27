@@ -66,4 +66,20 @@ export const servicesCatalog: ServiceCatalogEntry[] = [
       "Portes coulissantes, portails motorisés et barrières de parking — accès fluide, sécurités anti-écrasement et intégration badge.",
     ctaLabel: "Découvrir ce service",
   },
+  {
+    slug: "materiel-informatique",
+    icon: "computer",
+    title: "Matériel informatique",
+    shortDescription:
+      "PC, écrans, imprimantes, routeurs et switches — fourniture de matériel professionnel, livraison et configuration sur site.",
+    ctaLabel: "Découvrir ce service",
+  },
+  {
+    slug: "contrat-maintenance",
+    icon: "maintenance",
+    title: "Contrats de maintenance",
+    shortDescription:
+      "Visites préventives planifiées, interventions garanties et rapport écrit — un seul contrat pour réseau, caméras, alarme et matériel informatique.",
+    ctaLabel: "Découvrir ce service",
+  },
 ];

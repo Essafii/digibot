@@ -10,7 +10,9 @@ export type HomeServiceIcon =
   | "alarm"
   | "speaker"
   | "videophone"
-  | "door";
+  | "door"
+  | "computer"
+  | "maintenance";
 
 /** Slug URL — ajouter une entrée ici + fichier dans pages/ pour un nouveau service. */
 export type ServiceSlug =
@@ -25,7 +27,9 @@ export type ServiceSlug =
   | "systeme-alarme"
   | "sonorisation"
   | "videophone"
-  | "porte-automatique";
+  | "porte-automatique"
+  | "materiel-informatique"
+  | "contrat-maintenance";
 
 export type ServiceCatalogEntry = {
   slug: ServiceSlug;
