@@ -1,9 +1,13 @@
+import { ROUTES } from "@/constants/routes";
 import type { HomeServiceIcon, ServiceSlug } from "@/data/services/types";
 
 export type HomeServiceCard = {
   id: string;
   icon: HomeServiceIcon;
-  detailSlug: ServiceSlug;
+  /** Fiche service standard (/services/[slug]) — omettre si `href` est fourni. */
+  detailSlug?: ServiceSlug;
+  /** Lien direct, pour les pages hors catalogue services (ex. énergie solaire). */
+  href?: string;
   title: string;
   description: string;
 };
@@ -40,5 +44,13 @@ export const homeServicesHighlight: HomeServiceCard[] = [
     title: "Câblage structuré",
     description:
       "Infrastructure RJ45 Cat 6 et fibre optique — baie de brassage étiquetée, certifiée et documentée.",
+  },
+  {
+    id: "energie-solaire",
+    icon: "solar",
+    href: ROUTES.solar,
+    title: "Énergie solaire",
+    description:
+      "Panneaux solaires et autoconsommation — réduisez votre facture d'électricité avec une installation clé en main.",
   },
 ];

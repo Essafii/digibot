@@ -4,6 +4,7 @@ export const translations = {
     about: "À propos",
     services: "Services",
     projects: "Réalisations",
+    solar: "Énergie solaire",
     contact: "Contact",
     quote: "Demander un devis gratuit",
 
@@ -18,13 +19,22 @@ export const translations = {
     homeServicesEyebrow: "Expertises",
     homeServicesTitle: "Ce que DIGIBOT déploie pour vous",
     homeServicesDescription:
-      "Quatre domaines, une même exigence : des installations propres, des devis lisibles et un suivi jusqu'à la mise en service.",
+      "Nos domaines d'expertise, une même exigence : des installations propres, des devis lisibles et un suivi jusqu'à la mise en service.",
     discoverService: "Découvrir ce service",
 
     homeWhyEyebrow: "Valeur ajoutée",
     homeWhyTitle: "Pourquoi choisir DIGIBOT ?",
     homeWhyDescription:
       "Un partenaire technique et digital pour des projets sérieux, livrés avec exigence et suivi dans le temps.",
+
+    homeSolarEyebrow: "Énergie solaire",
+    homeSolarTitle: "☀️ Passez à l'énergie solaire",
+    homeSolarDescription:
+      "Réduisez durablement votre facture d'électricité avec une installation solaire clé en main : étude de consommation, dimensionnement, pose sécurisée et suivi après installation.",
+    homeSolarStatValue: "Jusqu'à 70%",
+    homeSolarStatLabel: "d'économie sur votre facture d'électricité",
+    homeSolarButton: "Demander un devis solaire",
+    homeSolarButtonHint: "Étude gratuite • réponse rapide",
 
     homeProjectsEyebrow: "Réalisations",
     homeProjectsTitle: "Des chantiers menés comme les vôtres",

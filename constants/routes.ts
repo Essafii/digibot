@@ -3,6 +3,7 @@ export const ROUTES = {
   about: "/a-propos",
   services: "/services",
   projects: "/realisations",
+  solar: "/energie-solaire",
   quote: "/demande-de-devis",
   contact: "/contact",
 } as const;

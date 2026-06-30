@@ -13,6 +13,7 @@ export const mainNav: NavItem[] = [
   { label: t.about, href: ROUTES.about },
   { label: t.services, href: ROUTES.services },
   { label: t.projects, href: ROUTES.projects },
+  { label: t.solar, href: ROUTES.solar },
   { label: t.quote, href: ROUTES.quote },
   { label: t.contact, href: ROUTES.contact },
 ];

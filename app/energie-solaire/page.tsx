@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Installation panneaux solaires au Maroc — Devis gratuit",
+  description:
+    "Installation de panneaux solaires et solutions d'autoconsommation au Maroc : audit de consommation, dimensionnement, pose sécurisée et suivi après installation. Devis gratuit avec DIGIBOT.",
+};
 
 const packs = [
   ["Résidentiel", "Maisons, villas et appartements avec consommation régulière."],

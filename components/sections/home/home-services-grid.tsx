@@ -29,10 +29,11 @@ export function HomeServicesGrid() {
           className="mx-auto max-w-3xl"
         />
 
-        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-8">
+        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-8 xl:grid-cols-5">
           {homeServicesHighlight.map((item) => {
             const Icon = serviceIcons[item.icon];
-            const detailHref = servicePath(item.detailSlug);
+            const detailHref =
+              item.href ?? (item.detailSlug ? servicePath(item.detailSlug) : "#");
 
             return (
               <li key={item.id}>

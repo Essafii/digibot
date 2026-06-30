@@ -10,6 +10,7 @@ import {
   Megaphone,
   Monitor,
   Network,
+  Sun,
   Tv,
   Video,
   Volume2,
@@ -34,4 +35,5 @@ export const serviceIcons: Record<
   door: DoorOpen,
   computer: Monitor,
   maintenance: ClipboardCheck,
+  solar: Sun,
 };

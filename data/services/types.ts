@@ -12,7 +12,8 @@ export type HomeServiceIcon =
   | "videophone"
   | "door"
   | "computer"
-  | "maintenance";
+  | "maintenance"
+  | "solar";
 
 /** Slug URL — ajouter une entrée ici + fichier dans pages/ pour un nouveau service. */
 export type ServiceSlug =
