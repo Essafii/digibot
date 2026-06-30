@@ -9,9 +9,10 @@ export function SolarFloat() {
         bottom-24
         right-6
         z-50
-        flex
+        hidden
         items-center
         gap-2
+        md:flex
         rounded-xl
         bg-gradient-to-r
         from-amber-500
